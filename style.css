@@ -544,3 +544,13 @@ Coding Profile */
         margin-bottom: 5px;
     }
 }
+
+
+@media (max-width: 768px) {
+    .project img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+        display: block;
+    }
+}
