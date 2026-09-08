@@ -446,3 +446,40 @@ Coding Profile */
     transform: translateY(-5px);
     border-color: #FFBF00;
 }
+
+@media (max-width: 768px) {
+
+    .main-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+        padding: 25px;
+    }
+
+    .main-content {
+        padding: 25px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .coding-container {
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+}
