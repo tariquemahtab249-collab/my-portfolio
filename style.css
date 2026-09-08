@@ -12,8 +12,9 @@ body {
     overflow-x: hidden;
 }
 
-
-/* Main Container */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .main-container {
     display: grid;
@@ -27,8 +28,9 @@ body {
     margin: auto;
 }
 
-
-/* Sidebar */
+/* =========================
+   SIDEBAR
+========================= */
 
 .sidebar {
     position: sticky;
@@ -40,19 +42,9 @@ body {
     padding: 25px;
 }
 
-
-/* Main Content */
-
-.main-content {
-    background-color: #2a2a2a;
-    border: 1px solid #3a3a3a;
-    border-radius: 16px;
-    padding: 40px;
-    padding-bottom: 50px;
-}
-
-
-/* Profile */
+/* =========================
+   PROFILE
+========================= */
 
 .profile {
     text-align: center;
@@ -63,6 +55,7 @@ body {
     width: 120px;
     border-radius: 50%;
     border: 1px solid #3a3a3a;
+    object-fit: cover;
 }
 
 .profile h2 {
@@ -82,8 +75,9 @@ body {
     display: inline-block;
 }
 
-
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     margin-top: 20px;
@@ -108,8 +102,9 @@ body {
     margin-bottom: 15px;
 }
 
-
-/* Social */
+/* =========================
+   SOCIAL
+========================= */
 
 .social {
     margin-top: 20px;
@@ -130,8 +125,21 @@ body {
     filter: grayscale(0) invert(0);
 }
 
+/* =========================
+   MAIN CONTENT
+========================= */
 
-/* Navigation */
+.main-content {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+    padding: 40px;
+    padding-bottom: 50px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
 
 #navigation {
     border-bottom: 2px solid #3a3a3a;
@@ -157,8 +165,9 @@ nav a:hover {
     color: #FFBF00;
 }
 
-
-/* Headings */
+/* =========================
+   HEADINGS
+========================= */
 
 .heading {
     color: #e0e0e0;
@@ -173,8 +182,9 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-
-/* About */
+/* =========================
+   ABOUT
+========================= */
 
 .content {
     text-align: justify;
@@ -185,8 +195,9 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-
-/* Skills */
+/* =========================
+   SKILLS
+========================= */
 
 .grid-container {
     display: grid;
@@ -207,7 +218,8 @@ nav a:hover {
 .item img {
     height: 48px;
     width: 48px;
-    filter: invert(75%) sepia(50%) saturate(1000%) hue-rotate(350deg) brightness(110%) contrast(101%);
+    filter: invert(75%) sepia(50%) saturate(1000%)
+        hue-rotate(350deg) brightness(110%) contrast(101%);
 }
 
 .item h3 {
@@ -220,11 +232,12 @@ nav a:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Coding Profiles */
+/* =========================
+   CODING PROFILES
+========================= */
 
 #coding-profiles {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .coding-container {
@@ -245,12 +258,16 @@ nav a:hover {
     text-decoration: none;
     color: #e0e0e0;
     transition: transform 0.3s ease, border-color 0.3s ease;
+    min-width: 0;
 }
 
 .coding-card img {
     width: 40px;
     height: 40px;
-    filter: invert(75%) sepia(90%) saturate(1000%) hue-rotate(5deg) brightness(105%) contrast(105%);
+    flex-shrink: 0;
+    filter: invert(75%) sepia(90%) saturate(1000%)
+        hue-rotate(5deg) brightness(105%) contrast(105%);
+    transition: transform 0.3s ease;
 }
 
 .coding-card h3 {
@@ -268,8 +285,9 @@ nav a:hover {
     border-color: #FFBF00;
 }
 
-
-/* Education */
+/* =========================
+   EDUCATION
+========================= */
 
 #education {
     margin-top: 30px;
@@ -286,10 +304,9 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-.edfirst h3,
-.edsecond h3 {
+.degree {
     color: #e0e0e0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 5px;
 }
@@ -327,14 +344,16 @@ nav a:hover {
     border: 2px solid #3a3a3a;
 }
 
-
-/* Projects */
+/* =========================
+   PROJECTS
+========================= */
 
 .project-container {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    width: 100%;
 }
 
 .project {
@@ -342,6 +361,8 @@ nav a:hover {
     border-radius: 12px;
     border: 1px solid #3a3a3a;
     overflow: hidden;
+    min-width: 0;
+    width: 100%;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -350,19 +371,23 @@ nav a:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-
-/* Project Images */
+/* PROJECT IMAGE */
 
 .project img {
+    display: block;
     width: 100%;
+    max-width: 100%;
     height: 180px;
     object-fit: contain;
-    display: block;
-    background-color: white;
+    object-position: center;
+    background-color: #ffffff;
 }
+
+/* PROJECT CARD */
 
 .card {
     padding: 20px;
+    min-width: 0;
 }
 
 .card h3 {
@@ -387,8 +412,9 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-
-/* Tablet */
+/* =========================
+   TABLET
+========================= */
 
 @media screen and (max-width: 1200px) {
 
@@ -403,8 +429,9 @@ nav a:hover {
     }
 }
 
-
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media screen and (max-width: 768px) {
 
@@ -437,8 +464,8 @@ nav a:hover {
 
     .main-content {
         padding: 25px;
+        padding-bottom: 40px;
     }
-
 
     /* Navigation */
 
@@ -452,13 +479,17 @@ nav a:hover {
         font-size: 0.9rem;
     }
 
-
     /* Coding Profiles */
 
     .coding-container {
         grid-template-columns: 1fr;
+        width: 100%;
     }
 
+    .coding-card {
+        width: 100%;
+        min-width: 0;
+    }
 
     /* Projects */
 
@@ -471,22 +502,26 @@ nav a:hover {
 
     .project {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
+        overflow: hidden;
     }
 
+    /* IMPORTANT: Mobile project images */
+
     .project img {
-        width: 100%;
-        height: 160px;
-        object-fit: contain;
         display: block;
-        background-color: white;
-        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 180px;
+        object-fit: contain;
+        object-position: center;
+        background-color: #ffffff;
     }
 
     .card {
         width: 100%;
         min-width: 0;
-        padding: 15px;
         overflow: hidden;
     }
 
@@ -499,6 +534,57 @@ nav a:hover {
     .card span {
         display: inline-block;
         max-width: 100%;
+        margin-right: 4px;
         margin-bottom: 5px;
+    }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .project-container {
+        gap: 18px;
+    }
+
+    .project img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card span {
+        font-size: 0.7rem;
+        padding: 4px 7px;
     }
 }
