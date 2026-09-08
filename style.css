@@ -543,3 +543,7 @@ Coding Profile */
         margin-bottom: 5px;
     }
 }
+
+.project:nth-child(2) img{
+    padding:25px;
+}
