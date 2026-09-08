@@ -503,3 +503,17 @@ nav a:hover {
         margin-bottom: 5px;
     }
 }
+
+.zoom-image {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 150px !important;
+}
+
+@media (max-width: 768px) {
+    .zoom-image {
+        width: 100% !important;
+        height: 160px !important;
+        object-fit: cover !important;
+    }
+}
