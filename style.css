@@ -12,9 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-/* =========================
-   MAIN CONTAINER
-========================= */
+/* Main Container */
 
 .main-container {
     display: grid;
@@ -28,9 +26,7 @@ body {
     margin: auto;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
+/* Sidebar */
 
 .sidebar {
     position: sticky;
@@ -42,9 +38,17 @@ body {
     padding: 25px;
 }
 
-/* =========================
-   PROFILE
-========================= */
+/* Main Content */
+
+.main-content {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+    padding: 40px;
+    padding-bottom: 50px;
+}
+
+/* Profile */
 
 .profile {
     text-align: center;
@@ -55,7 +59,6 @@ body {
     width: 120px;
     border-radius: 50%;
     border: 1px solid #3a3a3a;
-    object-fit: cover;
 }
 
 .profile h2 {
@@ -75,9 +78,7 @@ body {
     display: inline-block;
 }
 
-/* =========================
-   CONTACT
-========================= */
+/* Contact */
 
 .contact {
     margin-top: 20px;
@@ -102,9 +103,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* =========================
-   SOCIAL
-========================= */
+/* Social */
 
 .social {
     margin-top: 20px;
@@ -125,21 +124,7 @@ body {
     filter: grayscale(0) invert(0);
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-
-.main-content {
-    background-color: #2a2a2a;
-    border: 1px solid #3a3a3a;
-    border-radius: 16px;
-    padding: 40px;
-    padding-bottom: 50px;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
+/* Navigation */
 
 #navigation {
     border-bottom: 2px solid #3a3a3a;
@@ -165,9 +150,7 @@ nav a:hover {
     color: #FFBF00;
 }
 
-/* =========================
-   HEADINGS
-========================= */
+/* Headings */
 
 .heading {
     color: #e0e0e0;
@@ -182,9 +165,7 @@ nav a:hover {
     margin-bottom: 15px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* About */
 
 .content {
     text-align: justify;
@@ -195,9 +176,7 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-/* =========================
-   SKILLS
-========================= */
+/* Skills */
 
 .grid-container {
     display: grid;
@@ -232,9 +211,7 @@ nav a:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* =========================
-   CODING PROFILES
-========================= */
+/* Coding Profiles */
 
 #coding-profiles {
     margin-top: 30px;
@@ -258,13 +235,11 @@ nav a:hover {
     text-decoration: none;
     color: #e0e0e0;
     transition: transform 0.3s ease, border-color 0.3s ease;
-    min-width: 0;
 }
 
 .coding-card img {
     width: 40px;
     height: 40px;
-    flex-shrink: 0;
     filter: invert(75%) sepia(90%) saturate(1000%)
         hue-rotate(5deg) brightness(105%) contrast(105%);
     transition: transform 0.3s ease;
@@ -285,9 +260,7 @@ nav a:hover {
     border-color: #FFBF00;
 }
 
-/* =========================
-   EDUCATION
-========================= */
+/* Education */
 
 #education {
     margin-top: 30px;
@@ -344,16 +317,13 @@ nav a:hover {
     border: 2px solid #3a3a3a;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* Projects */
 
 .project-container {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    width: 100%;
 }
 
 .project {
@@ -361,8 +331,6 @@ nav a:hover {
     border-radius: 12px;
     border: 1px solid #3a3a3a;
     overflow: hidden;
-    min-width: 0;
-    width: 100%;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -371,23 +339,20 @@ nav a:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* PROJECT IMAGE */
+/* IMPORTANT: Images */
 
 .project img {
     display: block;
     width: 100%;
-    max-width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: contain;
-    object-position: center;
     background-color: #ffffff;
 }
 
-/* PROJECT CARD */
+/* Project Card */
 
 .card {
     padding: 20px;
-    min-width: 0;
 }
 
 .card h3 {
@@ -412,9 +377,7 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
-/* =========================
-   TABLET
-========================= */
+/* Tablet */
 
 @media screen and (max-width: 1200px) {
 
@@ -429,9 +392,7 @@ nav a:hover {
     }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* Mobile */
 
 @media screen and (max-width: 768px) {
 
@@ -464,7 +425,6 @@ nav a:hover {
 
     .main-content {
         padding: 25px;
-        padding-bottom: 40px;
     }
 
     /* Navigation */
@@ -483,40 +443,46 @@ nav a:hover {
 
     .coding-container {
         grid-template-columns: 1fr;
-        width: 100%;
     }
 
-    .coding-card {
-        width: 100%;
-        min-width: 0;
+    /* Skills */
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .item {
+        padding: 15px;
     }
 
     /* Projects */
 
     .project-container {
         grid-template-columns: 1fr;
+        gap: 20px;
         width: 100%;
         min-width: 0;
-        gap: 20px;
     }
 
     .project {
         width: 100%;
-        max-width: 100%;
         min-width: 0;
         overflow: hidden;
     }
 
-    /* IMPORTANT: Mobile project images */
+    /* Mobile Project Images */
 
     .project img {
         display: block;
         width: 100%;
+        height: auto;
         max-width: 100%;
-        height: 180px;
+        max-height: 160px;
         object-fit: contain;
         object-position: center;
         background-color: #ffffff;
+        margin: 0 auto;
     }
 
     .card {
@@ -534,57 +500,6 @@ nav a:hover {
     .card span {
         display: inline-block;
         max-width: 100%;
-        margin-right: 4px;
         margin-bottom: 5px;
-    }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media screen and (max-width: 480px) {
-
-    .main-container {
-        padding: 10px;
-    }
-
-    .sidebar {
-        padding: 20px;
-    }
-
-    .main-content {
-        padding: 20px;
-    }
-
-    .heading {
-        font-size: 1.6rem;
-    }
-
-    .project-container {
-        gap: 18px;
-    }
-
-    .project img {
-        width: 100%;
-        height: 180px;
-        object-fit: contain;
-    }
-
-    .card {
-        padding: 16px;
-    }
-
-    .card h3 {
-        font-size: 1rem;
-    }
-
-    .card p {
-        font-size: 0.9rem;
-    }
-
-    .card span {
-        font-size: 0.7rem;
-        padding: 4px 7px;
     }
 }
