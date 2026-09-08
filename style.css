@@ -544,6 +544,12 @@ Coding Profile */
     }
 }
 
-.project:nth-child(2) img{
-    padding:15px;
+@media (max-width: 768px) {
+    .project img {
+        width: 100%;
+        height: 160px;
+        object-fit: contain;
+        display: block;
+        padding: 0;
+    }
 }
